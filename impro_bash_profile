@@ -1,0 +1,67 @@
+source ~/.bashrc
+source ~/config_files/git-completion.bash
+source ~/config_files/git-prompt.sh
+#GIT_PS1_SHOWUPSTREAM="auto"
+#GIT_PS1_SHOWCOLORHINTS="yes"
+#export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ ";'
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#export PS1='\w$(__git_ps1 " (%s)")\$ '
+#PS1='[\!] [ \h@  \u  ]    \w    \n\[\e[0;32m\]$\[\e[m\] '
+#export LSCOLORS="BxGxhxFxCxEgEDxDxDxdxd"
+export PATH="$PATH:/Developer/Tools"
+#export PATH="$PATH:/usr/local/smlnj/bin"
+
+# and aliases are in another file
+
+
+# be careful lsH
+#alias ls='ls -lGp'
+#rsync options source destination
+#rsync two local directories
+# - n option, equivalent to --dry-run
+# with --stats option at the end of command
+#alias rsyncs='rsync --stats'
+#alias rsyt='rsync -t'
+#with archive mode
+# rsync options
+# -i => --itemize-changes
+# -I => --ignore-times
+#try find, grep aliases
+#also del
+#Use different browser for testing website
+#Edit some aliases for curl, wget,...
+#alias ports='netstat -tulanp'
+#alias ping='ping -c 5'
+#alias ports='netstat -tulanp'
+#alias root='sudo -i'
+#alias su='sudo -i'
+#git aliases
+# alias gf='git fetch --all --prune'
+# alias gs='git status '
+# alias ga='git add '
+# alias gb='git branch '
+# alias gc='git commit'
+# alias gd='git diff'
+# alias go='git checkout '
+# alias gk='gitk --all&'
+# alias gx='gitx --all'
+# alias got='git '
+# alias get='git '
+# alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+# python aliases
+# racket
+# aliases to add
+# count files, hidden files included? with wc -l  command
+# quickly find for a file, "find . -iname "
+# add commands for networking and process management
+# also for spotlight and Finder
+# monitoring tools aliases
+# top aliases
+# lsof aliases
+# shows internet sockets currently opened
+# shows only IPv4 or IPv6
+# shows  all TCP/UDP connections
+# iostat, only CPU stats
+# iostat, only disks stats
+# added by Anaconda3 4.2.0 installer
+#export PATH="/Users/crazydev/anaconda3/bin:$PATH"
