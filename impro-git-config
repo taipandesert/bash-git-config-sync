@@ -1,0 +1,44 @@
+credential.helper=osxkeychain
+alias.lg1=log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+alias.last=log -1 HEAD
+alias.unstage=reset HEAD --
+alias.co=checkout
+alias.br=branch
+alias.ci=commit
+alias.st=status
+alias.hist=log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+alias.type=cat-file -t
+alias.dump=cat-file -p
+alias.amend=commit --amend -a
+alias.ds=diff --staged
+alias.di=diff
+alias.log-fancy=log --graph --pretty=format:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(cyan)<%an>%Creset' --abbrev-commit --date=relative
+alias.log-nice=log --graph --decorate --pretty=oneline --abbrev-commit
+alias.logdate=log --pretty=format:'%h %cd [%an] %s' --graph --date=short
+alias.logweek=log --pretty=format:'%h %cd [%an] %s' --graph --date=short --since=1.week
+alias.logday=log --pretty=format:'%h %cd [%an] %s' --graph --date=relative --since=1.day
+alias.logstat=log --pretty=short --stat --oneline
+alias.logrev=log --reverse
+alias.logr=log --reverse --oneline
+alias.am=commit --amend
+alias.ph=push
+alias.ft=fetch
+alias.pl=pull
+alias.pr=pull --rebase
+alias.le=log --oneline --decorate
+alias.leg=log --oneline --decorate --graph
+alias.filelog=log -u
+alias.fl=log -u
+alias.dlc=diff --cached HEAD^
+user.name=Thomas Scott
+user.email=thom.scott@example.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+#remote.origin.url=https://github.com/taipandesert/emacs-settings.git
+#remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+#branch.master.remote=origin
+#branch.master.merge=refs/heads/master
