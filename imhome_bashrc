@@ -1,0 +1,16 @@
+	
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH=$PATH:/Applications/Mozart.app/Contents/Resources/bin
+#PS1='[\!] [ \h @   \u :   \[\033[0;91m\]\w\[\033[0m\]    ]\n\[\e[0;32m\]$\[\e[m\] '
+PATH="$PATH:/usr/local/smlnj-110.79/bin"
+if [ $(id -u) -eq 501 ];
+then # you are root, set red colour prompt
+  PS1="[\!] [ \h @  \[\033[0;91m\]\u\[\033[0m\]    \w  ]\n\[\e[0;32m\]$\[\e[m\]"
+else # normal
+  #PS1='[\!] [ \h @   \u :   \[\033[0;91m\]\w\[\033[0m\]    ]\n\[\e[0;32m\]$\[\e[m\] '
+  PS1='[\!] [ \h @   \u :   \[\033[0;91m\]\w\[\033[0m\]    ]\n\[\e[0;32m\]$\[\e[m\] $(__git_ps1 "(%s)")\n$ '
+fi
+HISTSIZE=1500
+
+export LSCOLORS="BxGxhxFxCxEgEDxDxDxdxd"
+

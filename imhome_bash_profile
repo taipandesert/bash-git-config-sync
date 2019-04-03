@@ -1,0 +1,342 @@
+source ~/.bashrc
+#source ~/config_files/git-completion.bash
+#source ~/config_files/git-prompt.sh
+#GIT_PS1_SHOWUPSTREAM="auto"
+#GIT_PS1_SHOWCOLORHINTS="yes"
+#export PROMPT_COMMAND='__git_ps1 "\u@\h:\W" "\\\$ ";'
+#export GIT_PS1_SHOWDIRTYSTATE=1
+#export PS1='\w$(__git_ps1 " (%s)")\$ '
+#PS1='[\!] [ \h@  \u  ]    \w    \n\[\e[0;32m\]$\[\e[m\] '
+#export LSCOLORS="BxGxhxFxCxEgEDxDxDxdxd"
+
+# Enable tab completion
+source ~/.udacity-terminal-config/git-completion.bash
+
+# Change command prompt
+source ~/.udacity-terminal-config/git-prompt.sh
+
+# colors!
+#red="\[\033[38;5;203m\]"
+#green="\[\033[38;05;38m\]"
+#blue="\[\033[0;34m\]"
+#reset="\[\033[0m\]"
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# '\u' adds the name of the current user to the prompt
+# '\$(__git_ps1)' adds git-related stuff
+# '\W' adds the name of the current directory
+#export PS1="$red\u$green\$(__git_ps1)$blue \W
+# $ $reset"
+
+
+export PATH="$PATH:/Developer/Tools"
+export PATH="$PATH:/usr/local/smlnj/bin"
+export PATH="$PATH:./anaconda3/bin/"
+export PATH="$PATH:/Applications/Racket\ v6.2.1/bin/"
+export PATH="$PATH:~/Library/Python/2.7/bin/"
+alias nowdate='date +"%Y-%m-%d"'
+alias home='cd ~'
+#alias boxs='cd ~/Box\ Sync/'
+alias boxs='cd /Volumes/Macintosh\ HD/Documents/boxsync/Box\ Sync/'
+#alias tosync='cd ~/Box\ Sync/ToSync'
+alias tosync='cd /Volumes/Macintosh\ HD/Documents/boxsync/Box\ Sync/ToSync/'
+alias docu='cd ~/Documents'
+alias downl='cd ~/Downloads'
+alias prog='cd ~/Documents/Programming'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias ..='cd ..'
+alias ..2='cd ../..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias ....='cd ../../..'
+alias l1='ls -1FG'
+alias l.='ls -alG | egrep "\ \."'
+alias ll='ls -Ghl'
+alias lli='ll -i'
+alias llT='ll -T'
+alias ld='l1 | grep /'
+# be careful lsH
+alias lsH='ls -H'
+#alias ls='ls -lGp'
+alias lt='ll -t'
+alias lu='ll -u'
+alias lU='ll -U'
+alias ltot='ls -al@eOGh'
+alias ltm='ls -al@eOGh | more'
+alias lr='ls -R | more'
+alias la='ls -alG'
+alias ln='ln -i'
+alias lss='ll -Sh'
+alias sha256='openssl dgst -sha256'
+alias sha1='openssl dgst -sha1'
+alias md5='openssl dgst -md5'
+alias mkdir='mkdir -pv'
+alias hist='history'
+alias mv='mv -i'
+alias rm='rm -iv'
+alias cp='cp -i'
+alias dux='du -ch'
+alias du1='du -ch -d 1'
+alias du3='du -ch -d 3'
+alias df='df -H'
+alias dudirs='du -hd 1'
+alias df='df -H'
+alias dutot='du -hs'
+alias fhere='find . -iname'
+alias stat='stat -x'
+alias diff_folder='diff -rq'
+alias diffrec='diff --recursive'
+alias cptree='rsync -a -f"+ */" -f"- *"'
+
+#rsync options source destination
+#rsync two local directories
+alias rsy='rsync -zhrv'
+# - n option, equivalent to --dry-run
+alias rsyn='rsy -n'
+# with --stats option at the end of command 
+#alias rsyncs='rsync --stats'
+#alias rsyt='rsync -t'
+#with archive mode
+alias rsya='rsy -a'
+alias rsyan='rsy -a -n'
+# rsync options
+# -i => --itemize-changes
+# -I => --ignore-times
+alias rsyni='rsyn -i'
+alias rsyni='rsyn -i'
+
+#try find, grep aliases
+#also del
+#Use different browser for testing website
+#Edit some aliases for curl, wget,...
+#alias ports='netstat -tulanp'
+#alias ping='ping -c 5'
+#alias ports='netstat -tulanp'
+#alias root='sudo -i'
+#alias su='sudo -i'
+
+
+#git aliases
+
+
+
+
+# python aliases 
+alias python3='/Users/crazydev/anaconda3/bin/python3'
+alias pip3='/Users/crazydev/anaconda3/bin/pip'
+alias ipython3='/Users/crazydev/anaconda3/bin/ipython'
+alias conda='/Users/crazydev/anaconda3/bin/conda'
+alias conda_activate='/Users/crazydev/anaconda3/bin/activate'
+# racket
+alias racket='/Applications/Racket\ v6.2.1/bin/racket'
+# aliases to add
+
+# count files, hidden files included? with wc -l  command
+# add commands for networking and process management
+# also for spotlight and Finder
+
+# monitoring tools aliases
+# top aliases
+# lsof aliases
+# shows internet sockets currently opened
+alias lsofi='lsof -i'
+# shows only IPv4 or IPv6
+alias lsofi4='lsof -i 4'
+alias lsofi6='lsof -i 6'
+
+# shows  all TCP/UDP connections
+alias lsoft='lsof -i tcp'
+# iostat, only CPU stats
+alias iostC='iostat -C'
+# iostat, only disks stats
+alias iostD='iostat -D'
+
+# added by Anaconda3 4.2.0 installer
+#export PATH="/Users/crazydev/anaconda3/bin:$PATH"
+
+##
+# Your previous /Users/crazydev/.bash_profile file was backed up as /Users/crazydev/.bash_profile.macports-saved_2017-08-14_at_14:35:14
+##
+
+# MacPorts Installer addition on 2017-08-14_at_14:35:14: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+#git aliases
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias gc='git commit'
+alias get='git '
+alias got='git '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias go='git checkout '
+alias gs='git status '
+alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
+alias glla='git log --graph --pretty=oneline --abbrev-commit --all'
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias g='git'
+alias gaa='git add --all'
+alias gall='git add -A'
+alias gap='git add -p'
+alias gapa='git add --patch'
+alias gau='git add --update'
+alias gba='git branch -a'
+alias gbd='git branch -d'
+alias gbl='git blame -b -w'
+alias gbm='git branch -m'
+alias gbnm='git branch --no-merged'
+alias gbr='git branch --remote'
+alias gbs='git bisect'
+alias gbsb='git bisect bad'
+alias gbsg='git bisect good'
+alias gbsr='git bisect reset'
+alias gbss='git bisect start'
+alias gbt='git branch --track'
+alias gc!='git commit -v --amend'
+alias gc='git commit -v'
+alias gca!='git commit -v -a --amend'
+alias gca='git commit -v -a'
+alias gcaa="git commit -a --amend -C HEAD"
+alias gcam="git commit -am"
+alias gcam='git commit -a -m'
+alias gcan!='git commit -v -a --no-edit --amend'
+alias gcans!='git commit -v -a -s --no-edit --amend'
+alias gcb='git checkout -b'
+alias gcd='git checkout develop'
+alias gcf='git config --list'
+alias gci='git commit --interactive'
+alias gcl='git clone --recursive'
+alias gcl='git clone'
+alias gclean='git clean -fd'
+alias gcm='git checkout master'
+alias gcm='git commit -v -m'
+alias gcmsg='git commit -m'
+alias gcn!='git commit -v --no-edit --amend'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gcpa='git cherry-pick --abort'
+alias gcpc='git cherry-pick --continue'
+alias gcs='git commit -S'
+alias gcsam="git commit -S -am"
+alias gcsm='git commit -s -m'
+alias gct='git checkout --track'
+alias gdca='git diff --cached'
+alias gdct='git describe --tags `git rev-list --tags --max-count=1`'
+alias gdel='git branch -D'
+alias gdt='git diff-tree --no-commit-id --name-only -r'
+alias gdv='git diff -w "$@" | vim -R -'
+alias gdw='git diff --word-diff'
+alias get='git'
+alias gexport='git archive --format zip --output'
+# alias gf='git fetch --all --prune'
+alias gf='git fetch'
+alias gfa='git fetch --all --prune'
+alias gfo='git fetch origin'
+alias gft='git fetch --all --prune --tags'
+alias gftv='git fetch --all --prune --tags --verbose'
+alias gfv='git fetch --all --prune --verbose'
+alias gg="git log --graph --pretty=format:'%C(bold)%h%Creset%C(magenta)%d%Creset %s %C(yellow)<%an> %C(cyan)(%cr)%Creset' --abbrev-commit --date=relative"
+alias ggpull='git pull origin $(git_current_branch)'
+alias ggpush='git push origin $(git_current_branch)'
+alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+alias ggui="git gui"
+alias ghh='git help'
+alias gignore='git update-index --assume-unchanged'
+alias gignored='git ls-files -v | grep "^[[:lower:]]"'
+alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
+alias gk='\gitk --all --branches'
+alias gke='\gitk --all $(git log -g --pretty=%h)'
+alias gl='git pull'
+alias glg='git log --stat'
+alias glgg='git log --graph'
+alias glgga='git log --graph --decorate --all'
+alias glgm='git log --graph --max-count=10'
+alias glgp='git log --stat -p'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias glo='git log --oneline --decorate'
+alias glog='git log --oneline --decorate --graph'
+alias gloga='git log --oneline --decorate --graph --all'
+alias glol="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glola="git log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
+alias glp="_git_log_prettily"
+alias glum='git pull upstream master'
+alias gm="git merge"
+alias gmom='git merge origin/master'
+alias gmt='git mergetool --no-prompt'
+alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
+alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
+alias gmum='git merge upstream/master'
+alias gmv='git mv'
+alias gnew="git log HEAD@{1}..HEAD@{0}"
+alias gp='git push'
+alias gpd='git push --dry-run'
+alias gpo='git push origin'
+alias gpoat='git push origin --all && git push origin --tags'
+alias gpom='git push origin master'
+alias gpp='git pull && git push'
+alias gpr='git pull --rebase'
+alias gpristine='git reset --hard && git clean -dfx'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gpu='git push --set-upstream'
+alias gpu='git push upstream'
+alias gpv='git push -v'
+alias gr='git remote'
+alias gra='git remote add'
+alias grb='git rebase'
+alias grba='git rebase --abort'
+alias grbc='git rebase --continue'
+alias grbi='git rebase -i'
+alias grbm='git rebase master'
+alias grbs='git rebase --skip'
+alias grh='git reset HEAD'
+alias grhh='git reset HEAD --hard'
+alias grm='git rm'
+alias grmv='git remote rename'
+alias grrm='git remote remove'
+alias grset='git remote set-url'
+alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
+alias gru='git reset --'
+alias grup='git remote update'
+alias grv='git remote -v'
+alias gs='git status'
+alias gsb='git status -sb'
+alias gsd='git svn dcommit'
+alias gsi='git submodule init'
+alias gsl="git shortlog -sn"
+alias gsps='git show --pretty=short --show-signature'
+alias gsr='git svn rebase'
+alias gss='git status -s'
+alias gst='git status'
+alias gsta='git stash save'
+alias gstaa='git stash apply'
+alias gstc='git stash clear'
+alias gstd='git stash drop'
+alias gstl="git stash list"
+alias gstp='git stash pop'
+alias gsts='git stash show --text'
+alias gsu='git submodule update --init --recursive'
+alias gsu='git submodule update'
+alias gt="git tag"
+alias gta="git tag -a"
+alias gtd="git tag -d"
+alias gtl="git tag -l"
+alias gts='git tag -s'
+alias gtv='git tag | sort -V'
+alias gunignore='git update-index --no-assume-unchanged'
+alias gunwip='git log -n 1 | grep -q -c "\-\-wip\-\-" && git reset HEAD~1'
+alias gup='git fetch && git rebase'
+alias gup='git pull --rebase'
+alias gupv='git pull --rebase -v'
+alias gus='git reset HEAD'
+alias gwc="git whatchanged"
+alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify -m "--wip-- [skip ci]"'
